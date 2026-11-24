@@ -1,0 +1,20 @@
+name: Build Metaverse Linux ISO
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Instalar dependências
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential bison flex texinfo \
+            xorriso isolinux grub-pc-bin mtools dosfstools qemu-utils \
+            squashfs-tools genisoimage wget curl git python3
