@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<metacity_theme>
+  <info>
+    <name>Metaverse</name>
+    <author>Metaverse Linux</author>
+    <copyright>Metaverse Linux 1.0.0 - Framboesa</copyright>
+    <date>2026</date>
+    <description>Tema oficial Metaverse - Roxo + Cyan</description>
+  </info>
+
+  <frame_geometry name="metaverse-normal" title_scale="medium" rounded_top_left="12" rounded_top_right="12" rounded_bottom_left="0" rounded_bottom_right="0">
+    <distance name="left_width" value="2"/>
+    <distance name="right_width" value="2"/>
+    <distance name="bottom_height" value="2"/>
+    <distance name="title_vertical_pad" value="10"/>
+    <aspect_ratio name="button" value="1.0"/>
+    <distance name="button_width" value="24"/>
+    <distance name="button_height" value="24"/>
+    <border name="title_border" left="12" right="12" top="6" bottom="6"/>
+    <border name="button_border" left="2" right="2" top="2" bottom="2"/>
+  </frame_geometry>
+
+  <frame_style name="metaverse-focused" geometry="metaverse-normal">
+    <piece position="entire_background" draw_ops="focused_background"/>
+    <piece position="title" draw_ops="focused_title"/>
+    <button function="close" state="normal" draw_ops="close_normal"/>
+    <button function="close" state="prelight" draw_ops="close_prelight"/>
+    <button function="close" state="pressed" draw_ops="close_pressed"/>
+    <button function="minimize" state="normal" draw_ops="minimize_normal"/>
+    <button function="maximize" state="normal" draw_ops="maximize_normal"/>
+  </frame_style>
+
+  <frame_style name="metaverse-unfocused" geometry="metaverse-normal">
+    <piece position="entire_background" draw_ops="unfocused_background"/>
+    <piece position="title" draw_ops="unfocused_title"/>
+    <button function="close" state="normal" draw_ops="close_unfocused"/>
+    <button function="minimize" state="normal" draw_ops="minimize_unfocused"/>
+    <button function="maximize" state="normal" draw_ops="maximize_unfocused"/>
+  </frame_style>
+
+  <frame_style_set name="metaverse-set">
+    <frame focus="yes" style="metaverse-focused"/>
+    <frame focus="no" style="metaverse-unfocused"/>
+  </frame_style_set>
+
+  <draw_ops name="focused_background">
+    <gradient type="vertical" x="0" y="0" width="width" height="height">
+      <color value="#7c3aed"/>
+      <color value="#1a0033"/>
+    </gradient>
+    <rectangle x="0" y="0" width="width" height="height" filled="false" color="#a855f7"/>
+  </draw_ops>
+
+  <draw_ops name="unfocused_background">
+    <rectangle x="0" y="0" width="width" height="height" filled="true" color="#2a0a4a"/>
+  </draw_ops>
+
+  <draw_ops name="focused_title">
+    <title color="#ffffff" x="12" y="6"/>
+  </draw_ops>
+
+  <draw_ops name="unfocused_title">
+    <title color="#aaaaaa" x="12" y="6"/>
+  </draw_ops>
+
+  <draw_ops name="close_normal">
+    <circle x="2" y="2" width="20" height="20" filled="true" color="#ff5f57"/>
+    <line x1="7" y1="7" x2="17" y2="17" color="#ffffff" width="2"/>
+    <line x1="17" y1="7" x2="7" y2="17" color="#ffffff" width="2"/>
+  </draw_ops>
+
+  <draw_ops name="close_prelight">
+    <circle x="2" y="2" width="20" height="20" filled="true" color="#ff3b30"/>
+    <line x1="7" y1="7" x2="17" y2="17" color="#ffffff" width="2"/>
+    <line x1="17" y1="7" x2="7" y2="17" color="#ffffff" width="2"/>
+  </draw_ops>
+
+  <draw_ops name="close_pressed">
+    <circle x="2" y="2" width="20" height="20" filled="true" color="#c00"/>
+  </draw_ops>
+
+  <draw_ops name="close_unfocused">
+    <circle x="2" y="2" width="20" height="20" filled="true" color="#555555"/>
+  </draw_ops>
+
+  <draw_ops name="minimize_normal">
+    <rectangle x="2" y="2" width="20" height="20" filled="true" color="#00d4ff"/>
+    <line x1="7" y1="14" x2="17" y2="14" color="#1a0033" width="3"/>
+  </draw_ops>
+
+  <draw_ops name="minimize_unfocused">
+    <rectangle x="2" y="2" width="20" height="20" filled="true" color="#555555"/>
+  </draw_ops>
+
+  <draw_ops name="maximize_normal">
+    <rectangle x="2" y="2" width="20" height="20" filled="true" color="#a855f7"/>
+    <rectangle x="7" y="7" width="10" height="10" filled="false" color="#ffffff" width="2"/>
+  </draw_ops>
+
+  <draw_ops name="maximize_unfocused">
+    <rectangle x="2" y="2" width="20" height="20" filled="true" color="#555555"/>
+  </draw_ops>
+
+  <window type="normal" style_set="metaverse-set"/>
+  <window type="dialog" style_set="metaverse-set"/>
+  <window type="modal_dialog" style_set="metaverse-set"/>
+  <window type="menu" style_set="metaverse-set"/>
+  <window type="utility" style_set="metaverse-set"/>
+</metacity_theme>
