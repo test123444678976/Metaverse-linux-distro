@@ -1,0 +1,38 @@
+# Metaverse Linux - GTK2 - Para apps antigos do MATE
+gtk-theme-name="Metaverse"
+gtk-icon-theme-name="mate-icon-theme-faenza"
+gtk-font-name="Ubuntu 11"
+gtk-cursor-theme-name="Adwaita"
+gtk-cursor-theme-size=24
+gtk-toolbar-style=GTK_TOOLBAR_BOTH_HORIZ
+gtk-menu-images=1
+gtk-button-images=1
+
+style "metaverse-default" {
+  bg[NORMAL] = "#1a0033"
+  bg[ACTIVE] = "#2a0a4a"
+  bg[PRELIGHT] = "#7c3aed"
+  bg[SELECTED] = "#a855f7"
+  bg[INSENSITIVE] = "#2a2a2a"
+  fg[NORMAL] = "#ffffff"
+  fg[ACTIVE] = "#ffffff"
+  fg[PRELIGHT] = "#ffffff"
+  fg[SELECTED] = "#ffffff"
+  fg[INSENSITIVE] = "#888888"
+  text[NORMAL] = "#ffffff"
+  text[SELECTED] = "#ffffff"
+  base[NORMAL] = "#1a0033"
+  base[SELECTED] = "#a855f7"
+  engine "pixmap" {
+    image {
+      function = BOX
+      file = "button.png"
+      border = { 4, 4, 4, 4 }
+      stretch = TRUE
+    }
+  }
+}
+class "GtkWidget" style "metaverse-default"
+class "GtkButton" style "metaverse-default"
+class "GtkEntry" style "metaverse-default"
+class "GtkMenu" style "metaverse-default"
