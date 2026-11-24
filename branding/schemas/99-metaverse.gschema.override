@@ -1,0 +1,19 @@
+[org.mate.background]
+picture-filename='/usr/share/backgrounds/metaverse/wallpaper.png'
+picture-options='zoom'
+primary-color='#1a0033'
+secondary-color='#00d4ff'
+color-shading-type='vertical-gradient'
+[org.mate.interface]
+gtk-theme='Metaverse'
+icon-theme='mate-icon-theme-faenza'
+font-name='Ubuntu 11'
+[org.mate.marco.general]
+theme='Metaverse'
+compositing-manager=true
+[org.mate.panel]
+default-layout='metaverse-layout'
+[org.mate.terminal.profile.default]
+background-color='#1a0033'
+foreground-color='#ffffff'
+use-theme-colors=false
