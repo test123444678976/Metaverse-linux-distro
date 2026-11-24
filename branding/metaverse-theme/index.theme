@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Metaverse
+Comment=Tema oficial Metaverse Linux
+[X-GNOME-Metatheme]
+GtkTheme=Metaverse
+MetacityTheme=Metaverse
+IconTheme=mate-icon-theme-faenza
