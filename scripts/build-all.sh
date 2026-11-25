@@ -20,11 +20,14 @@ cat > output/iso/boot/grub/grub.cfg << 'EOF'
 set timeout=10
 set default=0
 menuentry "Metaverse Linux 1.0.0 - Framboesa" {
-    linux /boot/vmlinuz boot=live quiet splash
+    linux /boot/vmlinuz root=/dev/sr0 ro nomodeset
+    initrd /boot/initrd.img
+}
+menuentry "Metaverse Linux (Modo Debug - ver erro)" {
+    linux /boot/vmlinuz root=/dev/sr0 ro debug ignore_loglevel
     initrd /boot/initrd.img
 }
 EOF
-
 # Criar ISO
 grub-mkrescue -o output/metaverse-linux-framboesa.iso output/iso 2>/dev/null || \
 xorriso -as mkisofs -o output/metaverse-linux-framboesa.iso -V "METAVERSE" -J -R output/iso
